@@ -1,0 +1,25 @@
+From fdc6bdb93dd2665f26bfbe63a0d85fd1f7811794 Mon Sep 17 00:00:00 2001
+From: Mio <mio@mio19.uk>
+Date: Tue, 16 Sep 2025 20:28:08 +1000
+Subject: [PATCH] TelegramFOSSPatch
+
+---
+ .../main/java/org/telegram/messenger/MessagesController.java    | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/TMessagesProj/src/main/java/org/telegram/messenger/MessagesController.java b/TMessagesProj/src/main/java/org/telegram/messenger/MessagesController.java
+index d2b080061..d30e3e4ad 100644
+--- a/TMessagesProj/src/main/java/org/telegram/messenger/MessagesController.java
++++ b/TMessagesProj/src/main/java/org/telegram/messenger/MessagesController.java
+@@ -21341,7 +21341,7 @@ public class MessagesController extends BaseController implements NotificationCe
+     public boolean isSponsoredDisabled() {
+         TLRPC.UserFull userFull = getUserFull(getUserConfig().getClientUserId());
+         if (userFull == null) return false;
+-        return !userFull.sponsored_enabled;
++        return true; // return !userFull.sponsored_enabled;
+     }
+ 
+     private boolean loadingAvailableEffects;
+-- 
+2.51.0
+
