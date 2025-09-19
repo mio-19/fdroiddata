@@ -3102,6 +3102,8 @@ Builds:
       - apt-get update
       - apt-get install -y ninja-build golang-go yasm cmake libuv1 make meson gperf
         ninja-build
+    patch:
+      - 0001-Killergram.patch
     gradle:
       - afatFd_v8a
     rm:
@@ -3113,7 +3115,7 @@ Builds:
       - ../prebuild_fdroid.sh 0 14577864 54d3ae230fd8f985ce9adccf08fbd9d6
     scandelete:
       - TMessagesProj/jni
-    ndk: r21e
+    ndk: 21.4.7075529
 
   - versionName: 12.1.1.0
     versionCode: 621107

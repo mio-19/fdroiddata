@@ -3569,12 +3569,15 @@ Builds:
       - apt-get install -y cmake golang-go libuv1 make ninja-build yasm
       - apt-get install -y -t bullseye openjdk-11-jdk-headless
       - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    patch:
+      - 0001-TelegramFOSSPatch.patch
     gradle:
       - afat
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
-    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
-      > API_KEYS
+    prebuild:
+      - echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397' > API_KEYS
+      - sed -i -e 's/-XX:MaxPermSize=4096m//'  ../gradle.properties
     scandelete:
       - TMessagesProj/jni
     build:
