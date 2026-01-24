@@ -3342,6 +3342,8 @@ Builds:
       - apt-get update
       - apt-get install -y ninja-build golang-go yasm cmake libuv1 make meson gperf
         ninja-build g++
+    patch:
+      - 0001-Killergram.patch
     gradle:
       - afatFd_v7a
     rm:
@@ -3356,7 +3358,7 @@ Builds:
       - TMessagesProj/src/main/assets/emoji/metadata.bin
     scandelete:
       - TMessagesProj/jni
-    ndk: r21e
+    ndk: 21.4.7075529
 
   - versionName: 12.3.1.0
     versionCode: 638508
@@ -3368,6 +3370,8 @@ Builds:
       - apt-get update
       - apt-get install -y ninja-build golang-go yasm cmake libuv1 make meson gperf
         ninja-build g++
+    patch:
+      - 0001-Killergram.patch
     gradle:
       - afatFd_v8a
     rm:
@@ -3382,7 +3386,7 @@ Builds:
       - TMessagesProj/src/main/assets/emoji/metadata.bin
     scandelete:
       - TMessagesProj/jni
-    ndk: r21e
+    ndk: 21.4.7075529
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
