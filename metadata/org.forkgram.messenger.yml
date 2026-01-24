@@ -3372,6 +3372,7 @@ Builds:
         ninja-build g++
     patch:
       - 0001-Killergram.patch
+      - no-arm.patch
     gradle:
       - afatFd_v8a
     rm:
