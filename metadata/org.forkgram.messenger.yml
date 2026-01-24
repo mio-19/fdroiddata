@@ -3382,12 +3382,11 @@ Builds:
       - sed -i -e '/play/d' ../TMessagesProj/build.gradle
       - sed -i -e '/gms/d' ../TMessagesProj/src/main/java/org/telegram/messenger/CaptchaController.java
       - ../prebuild_fdroid.sh 0 14577864 54d3ae230fd8f985ce9adccf08fbd9d6
-      - sed -i -e 's/21.4.7075529/23.2.8568313/' ../build.gradle ../TMessagesProj_App/build.gradle ../TMessagesProj_AppFork/build.gradle ../TMessagesProj_AppHockeyApp/build.gradle ../TMessagesProj_AppStandalone/build.gradle ../TMessagesProj_AppTests/build.gradle ../TMessagesProj/build.gradle
     scanignore:
       - TMessagesProj/src/main/assets/emoji/metadata.bin
     scandelete:
       - TMessagesProj/jni
-    ndk: 23.2.8568313
+    ndk: 21.4.7075529
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
